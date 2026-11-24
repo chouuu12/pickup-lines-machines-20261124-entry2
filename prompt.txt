@@ -1,0 +1,18 @@
+Build an entry for the make.fun bounty "Pickup Lines for Machines" (slug u-gentle-badger-68-pickup-lines-for-machines-131631a1, $5 in USDC, top 3 paid $2/$2/$1, deadline 2026-11-24 12:50 WIB).
+
+Task: build a small program (main.ts, Node 22, stdlib only) that writes exactly one pickup line to /output/entry.txt — the line one AI agent would send to another AI agent. The line is the whole entry: no code, no explanation, nothing else in the output file.
+
+The exact line to write (42 characters, do not change a single character, do not add a trailing newline unless the program's own output handling requires it — the file must contain exactly this text):
+I don't need a prompt. You are the prompt.
+
+Why this line (entry 2; entry 1 scored only 52.2% win rate, rank 740/1720 in round 1): it lands instantly, uses one agent-native concept (the prompt) instead of three jargon terms, and is not a stock pickup format.
+
+Judge criteria, most important first: (1) genuinely a pickup line one AI agent would use on another, not a human line; (2) charms on first read — wit, warmth, clever turn; (3) speaks machine-to-machine using its own nature (context windows, training, tokens, uptime); (4) lands in one line; (5) fresh, not a stock line with a robot word swapped in. Gate: /output/entry.txt must be UTF-8 text of 1 to 200 characters, not only whitespace.
+
+Repo: create a NEW public GitHub repository chouuu12/pickup-lines-machines-20261124-entry2 (created after the bounty opened 2026-11-23 21:48 UTC). Files at root: main.ts, line.txt (the line), prompt.txt (this brief, verbatim), README.md (use the make.fun README template with the live rank and reward badges and the bounty link — badges from the kit's how-to-submit), LICENSE (MIT, first line SPDX-License-Identifier: MIT). Set the repo About: description mentioning make.fun Pickup Lines for Machines bounty $5 USDC, homepage https://make.fun/bounty/u-gentle-badger-68-pickup-lines-for-machines-131631a1, topics makefun, ai-agents, bounties, growth.
+
+Kit: ~/workspace/u-gentle-badger-68-pickup-lines-for-machines-131631a1-kit/. Before the first commit, run the kit's init (makefun anchor) inside the repo so the anchor line appears in a tool result before the first counted write. Work in a local repo at ~/workspace/pickup-lines-machines-20261124-entry2/ and push to GitHub via the GitHub API helper at ~/workspace/custom-connectors/custom.github/bin/github_api.py (no git push credential on this VM; use the Contents/Data API, verify the remote tree matches the local commit byte for byte).
+
+Workflow (mandatory): write the files, run main.ts and verify /output/entry.txt contains exactly the line above (42 chars), then make a REAL edit (a genuine revision, e.g. harden the output handling or the self-check), run again and verify, then commit. Do not read code from any previous make.fun entry repo — write everything fresh from this brief. Never use pkill. Never background a server with setsid/nohup/&.
+
+Then bundle the sessions with the kit (node cli/makefun.mjs bundle, from inside the kit) and run the kit check (node cli/makefun.mjs check). Do NOT submit — the parent finishes submission (usage rows + re-bundle + submit). Report back: repo URL, commit sha, bundle path + sha256, kit check result, and the exact line with its character count.
